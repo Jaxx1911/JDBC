@@ -12,13 +12,13 @@ public class SinhVienManager extends JFrame {
     private Connection conn;
 
     public SinhVienManager() {
-        // Interface
+        // Init
         setTitle("Quản lý Sinh Viên");
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
 
-        // Data Label
+        // Text Field
         JLabel lblMaSV = new JLabel("Mã SV:");
         lblMaSV.setBounds(20, 20, 100, 25);
         add(lblMaSV);
