@@ -12,9 +12,11 @@ public class SinhVienManager extends JFrame {
     private Connection conn;
 
     public SinhVienManager() {
+
+
         // Init
         setTitle("Quản lý Sinh Viên");
-        setSize(600, 400);
+        setSize(600, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
 
@@ -51,28 +53,7 @@ public class SinhVienManager extends JFrame {
         tfGPA.setBounds(120, 140, 150, 25);
         add(tfGPA);
 
-        // CreateBTn
-        btnHienThi = new JButton("Hiển thị");
-        btnHienThi.setBounds(300, 20, 100, 25);
-        add(btnHienThi);
-
-        btnThem = new JButton("Thêm");
-        btnThem.setBounds(300, 60, 100, 25);
-        add(btnThem);
-
-        btnCapNhat = new JButton("Cập Nhật");
-        btnCapNhat.setBounds(300, 100, 100, 25);
-        add(btnCapNhat);
-
-        btnXoa = new JButton("Xoá");
-        btnXoa.setBounds(300, 140, 100, 25);
-        add(btnXoa);
-
-        btnReset = new JButton("Reset");
-        btnReset.setBounds(300, 180, 100, 25);
-        add(btnReset);
-
-        // CreateTable
+        // Create Table
         model = new DefaultTableModel();
         model.addColumn("Mã SV");
         model.addColumn("Họ Tên");
@@ -81,8 +62,29 @@ public class SinhVienManager extends JFrame {
 
         table = new JTable(model);
         JScrollPane sp = new JScrollPane(table);
-        sp.setBounds(20, 220, 550, 120);
+        sp.setBounds(20, 180, 550, 200);
         add(sp);
+
+        // Create Buttons - đặt các nút ở phía dưới
+        btnHienThi = new JButton("Hiển thị");
+        btnHienThi.setBounds(50, 400, 100, 25);
+        add(btnHienThi);
+
+        btnThem = new JButton("Thêm");
+        btnThem.setBounds(160, 400, 100, 25);
+        add(btnThem);
+
+        btnCapNhat = new JButton("Cập Nhật");
+        btnCapNhat.setBounds(270, 400, 100, 25);
+        add(btnCapNhat);
+
+        btnXoa = new JButton("Xoá");
+        btnXoa.setBounds(380, 400, 100, 25);
+        add(btnXoa);
+
+        btnReset = new JButton("Reset");
+        btnReset.setBounds(490, 400, 100, 25);
+        add(btnReset);
 
         // ConnectDB
         connectToDatabase();
